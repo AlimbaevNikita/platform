@@ -217,113 +217,11 @@
                         <br/><br/>
                         10.Не бояться совершать ошибки и быть настойчивым.                     
                      </p>
-                  </script>
-                  <br/>
-                  <h1>Тест</h1>
-                  <div id="question"></div>
-                  <div>
-                    <input type="radio" name="answer" id="answer1">
-                    <label for="answer1" id="answer1Label"></label>
+                     
                   </div>
-                  <div>
-                    <input type="radio" name="answer" id="answer2">
-                    <label for="answer2" id="answer2Label"></label>
-                  </div>
-                  <div>
-                    <input type="radio" name="answer" id="answer3">
-                    <label for="answer3" id="answer3Label"></label>
-                  </div>
-                  <button onclick="checkAnswer()">Ответить</button>
+                  <br><br/>
+                  <iframe width="2282" height="739" src="https://www.youtube.com/embed/m-Y4whvBVWg?list=PL5E8DAEBDB8E18DBD" title="Английский с нуля. Урок 5. Личные местоимения" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-                  <br/><br/>
-                  <h2>Результаты:</h2>
-                  <p id="score"></p>
-                  <br/>
-                  <script>
-                    var questions = [
-                      {
-                        question: "Какой совет помогает учить английский язык быстрее?",
-                        options: ["Регулярная практика и иммерсия в языковую среду.", "Использование разнообразных ресурсов и материалов для обучения.", "Общение с носителями языка и присоединение к языковым группам."],
-                        answer: 0
-                      },
-                     {
-                       question: "Какие навыки следует развивать при изучении английского языка?",
-                       options: ["Чтение, письмо, слушание и говорение.", "Грамматика и расширение словарного запаса.", "Использование методов мнемотехники и повторение материала."],
-                       answer: 0
-                     },
-                     {
-                       question: "Что следует делать, чтобы прогрессировать в изучении английского языка?",
-                       options: ["Установить ясные цели и отслеживать прогресс.", "Прослушивать аудио и просмотр видеоматериалов на английском языке.", "Не бояться совершать ошибки и быть настойчивым."],
-                       answer: 0
-                     },
-                    ];
-                    
-                    var currentQuestion = 0;
-                    var score = 0;
-                    
-                    var questionElement = document.getElementById("question");
-                    var answer1Element = document.getElementById("answer1Label");
-                    var answer2Element = document.getElementById("answer2Label");
-                    var answer3Element = document.getElementById("answer3Label");
-                    var scoreElement = document.getElementById("score");
-                
-                    function displayQuestion() {
-                      var currentQuestionObj = questions[currentQuestion];
-                      
-                      questionElement.textContent = currentQuestionObj.question;
-                      answer1Element.textContent = currentQuestionObj.options[0];
-                      answer2Element.textContent = currentQuestionObj.options[1];
-                      answer3Element.textContent = currentQuestionObj.options[2];
-                      
-                      clearSelectedAnswer();
-                    }
-                
-                    function checkAnswer() {
-                      var selectedAnswer;
-                      
-                      if (document.getElementById("answer1").checked) {
-                        selectedAnswer = 0;
-                      } else if (document.getElementById("answer2").checked) {
-                        selectedAnswer = 1;
-                      } else if (document.getElementById("answer3").checked) {
-                        selectedAnswer = 2;
-                      }
-                      
-                      var correctAnswer = questions[currentQuestion].answer;
-                
-                      if (selectedAnswer === correctAnswer) {
-                        score++;
-                        clearSelectedAnswer();
-                      }
-                
-                      currentQuestion++;
-                
-                      if (currentQuestion === questions.length) {
-                        hideQuestion();
-                        scoreElement.textContent = "Вы ответили правильно на " + score + " из " + questions.length + " вопросов.";
-                      } else {
-                        displayQuestion();
-                      }
-                    }
-                    
-                    function clearSelectedAnswer() {
-                       document.getElementById("answer1").checked = false;
-                       document.getElementById("answer2").checked = false;
-                       document.getElementById("answer3").checked = false;
-                     }
-                     
-                     function hideQuestion() {
-                       questionElement.style.display = "none";
-                       answer1Element.style.display = "none";
-                       answer2Element.style.display = "none";
-                       answer3Element.style.display = "none";
-                     }
-                     
-                     displayQuestion();
-                     </script>
-
-                     
-                  </div>
                </div>
             </div>
          </div>
